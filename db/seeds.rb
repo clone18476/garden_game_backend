@@ -5,3 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+my_garden = Garden.create
+
+sunflower = my_garden.plants.build(name: 'Sunflower', img_url: 'sunflower.jpeg')
