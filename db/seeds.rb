@@ -8,4 +8,4 @@
 
 my_garden = Garden.create
 
-sunflower = my_garden.plants.build(name: 'Sunflower', img_url: 'sunflower.jpeg')
+sunflower = my_garden.plants.build(name: 'Sunflower', img_url: 'sunflower.jpeg').save
