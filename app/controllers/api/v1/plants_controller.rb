@@ -17,6 +17,6 @@ class Api::V1::PlantsController < ApplicationController
     private 
 
     def plant_params 
-        params.require(:plant).permit(:name, :img_url, garden: [:id])
+        params.require(:plant).permit(:name, :img_url, :time_to_grow, garden: [:id])
     end
 end
