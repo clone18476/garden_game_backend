@@ -1,8 +1,9 @@
 class Api::V1::GardensController < ApplicationController
 
     def index 
-        @gardens = Garden.all 
-        render json: @gardens
+        gardens = Garden.all 
+        # render json: @gardens
+        render json: GardenSerializer.new(gardens)
     end
 
     def create 
