@@ -9,7 +9,7 @@ class Api::V1::GardensController < ApplicationController
     def create 
         garden = Garden.new(garden_params)
         if garden.save 
-            render json: garden, status: accepted
+            render json: garden#, status: accepted => causes NameError (undefined local variable or method `accepted' for #<Api::V1::GardensController:0x007fd7d805bad8>) on POST request
         else 
             render json: {errors: garden.errors.full_messages}, status: unprocessible_entity
         end
@@ -18,6 +18,6 @@ class Api::V1::GardensController < ApplicationController
     private 
 
     def garden_params 
-        params.require(:garden)#.permit(:user_id)???
+        params.require(:garden).permit(:gardener)
     end
 end
